@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-style.css') }}">
+		<style>
+			* {box-sizing: border-box;}
+			body {
+				margin: 0;
+				font-family: Arial;
+			}
+			.header {
+				overflow: hidden;
+				background-color: white;
+				padding: 0px 10px;
+				font-family: gill sans, sans-serif;
+				border-bottom: solid;
+    			border-block-color: grey;
+			}
+			.header-right span {
+				float: left;
+				color: black;
+				text-align: center;
+				padding: 12px;
+				text-decoration: none;
+				font-size: 18px;
+				line-height: 25px;
+				border-radius: 5px;
+			}
+			.header a {
+				float: left;
+				color: black;
+				text-align: center;
+				padding: 12px;
+				text-decoration: none;
+				font-size: 18px;
+				line-height: 25px;
+				border-radius: 5px;
+			}
+			.header a.logo {
+				font-size: 25px;
+				text-align: center;
+			}
+			.header a.logo:hover {
+				color: black;
+				background-color: white;
+			}
+			.header a.logo img{
+				width: 50px;
+				height: 50px;
+			}
+			.logotext {
+				text-align: center;
+				float: right;
+				padding-top: 15px;
+				padding-left: 5px;
+				font-family: gill sans, sans-serif;
+			}
+			.header a:hover {
+				background-color: grey;
+				color: white;
+			}
+			.header a.active {
+				background-color: #234169;
+				color: white;
+			}
+			.header-right {
+				float: right;
+				padding-top: 15px;
+			}
+			.main-posts {
+				background-color: #234169
+			}
+			.post-thumb img {
+				height: 235px;
+			}
+			.inside h4 {
+				font-family: Lucida Sans Typewriter;
+				font-weight: bold;
+			}
+			.title-over h4 {
+				font-family: Lucida Sans Typewriter;
+				font-weight: bold;
+			}
+			@media screen and (max-width: 500px) {
+				.header span {
+					float: none;
+					display: block;
+					text-align: left;
+				}
+				.header a {
+					float: none;
+					display: block;
+					text-align: left;
+				}
+				.header-right {
+					float: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+	  		<a href="/home" class="logo"> <img src="{{url_for('static', filename='img/logo.png')}}"/><div class="logotext"> Data Driven Analysis on Job Portals </div></a>
+	  		<div class="header-right">
+	  			<span> Welcome {{username}} </span>
+				<a href="/home">Home</a>
+				<a href="/logout">Logout</a>
+			</div>
+		</div>
+		<div class="main-posts">
+			<div class='tableauPlaceholder' id='viz1669060443400' style='position: relative'>
+			    <noscript>
+			        <a href='#'>
+			            <img alt='Development area ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;10&#47;10_16690255534480&#47;Developmentarea&#47;1_rss.png' style='border: none' />
+			        </a>
+			    </noscript>
+			    <object class='tableauViz' style='display:none;'>
+			        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+			        <param name='embed_code_version' value='3' />
+			        <param name='site_root' value='' />
+			        <param name='name' value='10_16690255534480&#47;Developmentarea' />
+			        <param name='tabs' value='no' />
+			        <param name='toolbar' value='yes' />
+			        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;10&#47;10_16690255534480&#47;Developmentarea&#47;1.png' />
+			        <param name='animate_transition' value='yes' />
+			        <param name='display_static_image' value='yes' />
+			        <param name='display_spinner' value='yes' />
+			        <param name='display_overlay' value='yes' />
+			        <param name='display_count' value='yes' />
+			        <param name='language' value='en-US' />
+			    </object>
+			</div>
+			<script type='text/javascript'>
+			    var divElement = document.getElementById('viz1669060443400');
+			    var vizElement = divElement.getElementsByTagName('object')[0];
+			    vizElement.style.width = '100%';
+			    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+			    var scriptElement = document.createElement('script');
+			    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+			    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+			</script>
+		</div>
+	</body>
+</html>

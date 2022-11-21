@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-style.css') }}">
+		<style>
+			* {box-sizing: border-box;}
+			body {
+				margin: 0;
+				font-family: Arial;
+			}
+			.header {
+				overflow: hidden;
+				background-color: white;
+				padding: 0px 10px;
+				font-family: gill sans, sans-serif;
+			}
+			.header-right span {
+				float: left;
+				color: black;
+				text-align: center;
+				padding: 12px;
+				text-decoration: none;
+				font-size: 18px;
+				line-height: 25px;
+				border-radius: 5px;
+			}
+			.header a {
+				float: left;
+				color: black;
+				text-align: center;
+				padding: 12px;
+				text-decoration: none;
+				font-size: 18px;
+				line-height: 25px;
+				border-radius: 5px;
+			}
+			.header a.logo {
+				font-size: 25px;
+				text-align: center;
+			}
+			.header a.logo:hover {
+				color: black;
+				background-color: white;
+			}
+			.header a.logo img{
+				width: 50px;
+				height: 50px;
+			}
+			.logotext {
+				text-align: center;
+				float: right;
+				padding-top: 15px;
+				padding-left: 5px;
+				font-family: gill sans, sans-serif;
+			}
+			.header a:hover {
+				background-color: grey;
+				color: white;
+			}
+			.header a.active {
+				background-color: #234169;
+				color: white;
+			}
+			.header-right {
+				float: right;
+				padding-top: 15px;
+			}
+			.main-posts {
+				background-color: #234169
+			}
+			.post-thumb img {
+				height: 235px;
+			}
+			.inside h4 {
+				font-family: Lucida Sans Typewriter;
+				font-weight: bold;
+			}
+			.title-over h4 {
+				font-family: Lucida Sans Typewriter;
+				font-weight: bold;
+			}
+			@media screen and (max-width: 500px) {
+				.header span {
+					float: none;
+					display: block;
+					text-align: left;
+				}
+				.header a {
+					float: none;
+					display: block;
+					text-align: left;
+				}
+				.header-right {
+					float: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+	  		<a href="/home" class="logo"> <img src="{{url_for('static', filename='img/logo.png')}}"/><div class="logotext"> Data Driven Analysis on Job Portals </div></a>
+	  		<div class="header-right">
+	  			<span> Welcome {{username}} </span>
+				<a class="active" href="/home">Home</a>
+				<a href="/logout">Logout</a>
+			</div>
+		</div>
+		<div class="main-posts">
+		    <div class="container">
+		        <div class="row">
+		            <h3 style= 'font-size: 23px; font-weight: lighter; color: white; text-align: center; margin-bottom: 70px; margin-top: 50px; font-family: Lucida Sans Typewriter;'>This is a detailed analysis of recruitment process based on data collected from multiple job portals and developer community survey. The analysis aims to understand the perspective of both recruiters and candidates and generate meaningful insights, serving as a one stop portal. The visual models describe such analysis in the form of intuitive graphs and tables. </h3>
+		        	<div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/9.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Jobs count based on source</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/sourcewisejobs"> <i class="fa fa-plus"></i></a>
+		                            
+		                            <h4>Jobs count based on source</h4>
+		                            
+		                        </div>
+		                    </div>
+		                </div>
+		            </div> <!-- /.post-masonry -->
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/8.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Location of jobs (State-wise)</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/statewisejobs"> <i class="fa fa-plus"></i></a>
+		                            
+		                            <h4>Location of jobs (State-wise)</h4>
+		                            
+		                        </div>
+		                    </div>
+		                </div>
+		            </div> <!-- /.post-masonry -->
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/7.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Location of jobs (City-wise)</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/citywiselisting"> <i class="fa fa-plus"></i></a>
+		                            
+		                            <h4><a href="#">Location of jobs (City-wise)</a></h4>
+		                            
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/10.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Listings of the job positions</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/jobpositionslist"> <i class="fa fa-plus"></i></a>
+		                            
+		                            <h4><a href="#">Listings of the job positions</a></h4>
+		                            
+		                        </div>
+		                    </div>
+		                </div>
+		            </div> <!-- /.post-masonry -->
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/6.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Current status of aspirants</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/aspirantscurrentstatus"> <i class="fa fa-plus"></i></a>
+		                            <h4><a href="#">Current status of aspirants</a></h4>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div> <!-- /.post-masonry -->
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/5.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Employee count per development area</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/developmentarea"> <i class="fa fa-plus"></i></a>
+		                            
+		                            <h4>Employee count per development area</h4>
+		                            
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/4.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Employee count based on skill set</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/skillsets"> <i class="fa fa-plus"></i></a>
+		                            
+		                            <h4>Employee count based on skill set</h4>
+		                            
+		                        </div>
+		                    </div>
+		                </div>
+		            </div> <!-- /.post-masonry -->
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/1.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Employee ratio per gender</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/genderbasedemployees"> <i class="fa fa-plus"></i></a>
+		                           
+		                            <h4><a href="#">Employee ratio per gender</a></h4>
+		                            
+		                        </div>
+		                    </div>
+		                </div>
+		            </div> <!-- /.post-masonry -->
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/3.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Average salary for trending jobs</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/averagesalary"> <i class="fa fa-plus"></i></a>
+		                            <h4><a href="#">Average salary for trending jobs</a></h4>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="post-masonry col-md-4 col-sm-6">
+		                <div class="post-thumb">
+		                    <img src="{{url_for('static', filename='img/2.png')}}" alt="">
+		                    <div class="title-over">
+		                        <h4><a href="#">Average ratings of the job positions</a></h4>
+		                    </div>
+		                    <div class="post-hover text-center">
+		                        <div class="inside">
+		                            <a href= "/averagerating"> <i class="fa fa-plus"></i></a>
+		                            <h4><a href="#">Average ratings of the job positions</a></h4>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
